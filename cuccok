@@ -1,0 +1,81 @@
+ <fieldset>
+            <legend>regisztráció</legend>
+            <ol>
+                <li>
+                    <label for="username">felhasználónév<em>*</em></label>
+                    <input id="username" type="text"/>
+                </li>
+                <li>
+                    <label for="password1">jelszó<em>*</em></label>
+                    <input id="password1" type="password"/>
+                </li>
+                <li>
+                    <label for="email1">e-mail cím<em>*</em></label>
+                    <input id="email1" type="text"/>
+                </li>
+            </ol>
+        </fieldset>
+
+        <fieldset>
+          
+
+        <fieldset>
+            <legend>egyéb</legend>
+            <ol>
+                <li>
+                    <label for="birthdate">születési dátum</label>
+                    <select>
+                        <option>1980</option>
+                                              <option>1981</option>
+                                              <option>1982</option>
+                                              <option>1983</option>
+                                              <option>1984</option>
+                                              <option>1985</option>
+                                              <option>1986</option>
+
+
+
+
+
+                    </select>
+                    <select>
+                        <option>január</option>
+                      <option>február</option>
+                                            <option>március</option>
+                                            <option>május</option>
+                                            <option>június</option>
+                                            <option>július</option>
+                                            <option>augusztus</option>
+                                            <option>szeptember</option>
+                      <option>október</option>                  
+                      <option>november</option>
+                                            <option>december</option>
+
+
+
+
+
+
+
+
+                    </select>
+                    <select>
+                        <option>1</option>
+                    </select>
+                </li>
+                <li>
+                    <fieldset>
+                        <legend>hírlevél</legend>
+                        <ol>
+                            <li><label for="newsletter_yes"><input id="newsletter_yes" type="checkbox"/> igen</label></li>
+                            <li><label for="newsletter_no"><input id="newsletter_no" type="checkbox"/> nem</label></li>
+                        </ol>
+                    </fieldset>
+                </li>
+            </ol>
+        </fieldset>
+
+        <input type="submit" value="regisztráció"/>
+
+    </form>
+</div>
