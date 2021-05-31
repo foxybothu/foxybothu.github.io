@@ -245,6 +245,32 @@
   </div>
 </div>
 
+  
+  <!DOCUMENT HTML>
+<HTML>
+<HEAD>
+    <meta http-equiv="content-type" content="text/html; charset=UTF8" >
+</HEAD>
+<BODY>
+
+    <h1>Kérem adja meg a nevét!</h1>
+    <form method="GET" action="hello.php">
+        <table>
+            <tr>
+                <td>Név:</td>
+                <td><input type="text" name="nev" value="Írd ide a neved" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Elküld" /></td>
+            </tr>
+        </table>
+    </form>
+
+</BODY>
+</HTML>
+
+  
 <div class="container-fluid bg-grey">
   <div class="row">
     <div class="col-sm-4">
@@ -258,20 +284,6 @@
   </div>
 </div>
 
-  <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
-</head>
-<body>
-<?php
-include ("config.php");
-print "<form method=post action='$php_self'>";
-print "Név:<input type=text name='nev'>";
-print "Jelszó:<input type=password name='jelszo'>";
-print "Jelszó újra:<input type=password name='jelszo2'>";
-print "E-mail cím:<input type=text name='mail'>";
-print "<input type=submit value=Regisztráció></form>";
-?>
 <!-- Container (Services Section) -->
 <div id="mitkinalunk" class="container-fluid text-center">
   <h2>Mit kínálunk?</h2>
