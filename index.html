@@ -246,29 +246,94 @@
 </div>
 
   
-  <!DOCUMENT HTML>
-<HTML>
-<HEAD>
-    <meta http-equiv="content-type" content="text/html; charset=UTF8" >
-</HEAD>
-<BODY>
 
-    <h1>Kérem adja meg a nevét!</h1>
-    <form method="GET" action="hello.php">
-        <table>
-            <tr>
-                <td>Név:</td>
-                <td><input type="text" name="nev" value="Írd ide a neved" /></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="submit" value="Elküld" /></td>
-            </tr>
-        </table>
+<html>
+<head>
+    <title>form</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<div id="container">
+    <form action="" method="post" id="reg">
+
+        <fieldset>
+            <legend>regisztráció</legend>
+            <ol>
+                <li>
+                    <label for="username">felhasználónév<em>*</em></label>
+                    <input id="username" type="text"/>
+                </li>
+                <li>
+                    <label for="password1">jelszó<em>*</em></label>
+                    <input id="password1" type="password"/>
+                </li>
+                <li>
+                    <label for="email1">e-mail cím<em>*</em></label>
+                    <input id="email1" type="text"/>
+                </li>
+            </ol>
+        </fieldset>
+
+        <fieldset>
+            <legend>cím</legend>
+            <ol>
+                <li>
+                    <label for="fullname">teljes név<em>*</em></label>
+                    <input id="fullname" type="text"/>
+                </li>
+                <li>
+                    <label for="city">város</label>
+                    <input id="city" type="text"/>
+                </li>
+                <li>
+                    <label for="zip">irányítószám</label>
+                    <input id="zip" type="text"/>
+                </li>
+                <li>
+                    <label for="address">cím</label>
+                    <input id="address" type="text"/>
+                </li>
+            </ol>
+        </fieldset>
+
+        <fieldset>
+            <legend>egyéb</legend>
+            <ol>
+                <li>
+                    <label for="birthdate">születési dátum</label>
+                    <select>
+                        <option>1980</option>
+                    </select>
+                    <select>
+                        <option>január</option>
+                    </select>
+                    <select>
+                        <option>1</option>
+                    </select>
+                </li>
+                <li>
+                    <fieldset>
+                        <legend>hírlevél</legend>
+                        <ol>
+                            <li><label for="newsletter_yes"><input id="newsletter_yes" type="checkbox"/> igen</label></li>
+                            <li><label for="newsletter_no"><input id="newsletter_no" type="checkbox"/> nem</label></li>
+                        </ol>
+                    </fieldset>
+                </li>
+            </ol>
+        </fieldset>
+
+        <input type="submit" value="regisztráció"/>
+
     </form>
+</div>
 
-</BODY>
-</HTML>
+</body>
+</html>
+
 
   
 <div class="container-fluid bg-grey">
