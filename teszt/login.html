@@ -2,51 +2,7 @@
 <head>
 <title>User Login</title>
 <link href="./view/css/style.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-    <div>
-        <form action="login-action.php" method="post" id="frmLogin" onSubmit="return validate();">
-            <div class="demo-table">
-
-                <div class="form-head">Login</div>
-                <?php 
-                if(isset($_SESSION["errorMessage"])) {
-                ?>
-                <div class="error-message"><?php  echo $_SESSION["errorMessage"]; ?></div>
-                <?php 
-                unset($_SESSION["errorMessage"]);
-                } 
-                ?>
-                <div class="field-column">
-                    <div>
-                        <label for="username">Username</label><span id="user_info" class="error-info"></span>
-                    </div>
-                    <div>
-                        <input name="user_name" id="user_name" type="text"
-                            class="demo-input-box">
-                    </div>
-                </div>
-                <div class="field-column">
-                    <div>
-                        <label for="password">Password</label><span id="password_info" class="error-info"></span>
-                    </div>
-                    <div>
-                        <input name="password" id="password" type="password"
-                            class="demo-input-box">
-                    </div>
-                </div>
-                <div class=field-column>
-                    <div>
-                        <input type="submit" name="login" value="Login"
-                        class="btnLogin"></span>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-</body>
-</html>
-body {
+    body {
     font-family: Arial;
     color: #333;
     font-size: 0.95em;
@@ -146,7 +102,48 @@ body {
 a.logout-button {
     color: #09f;
 }
-  <script>
+</head>
+<body>
+    <div>
+        <form action="login-action.php" method="post" id="frmLogin" onSubmit="return validate();">
+            <div class="demo-table">
+
+                <div class="form-head">Login</div>
+                <?php 
+                if(isset($_SESSION["errorMessage"])) {
+                ?>
+                <div class="error-message"><?php  echo $_SESSION["errorMessage"]; ?></div>
+                <?php 
+                unset($_SESSION["errorMessage"]);
+                } 
+                ?>
+                <div class="field-column">
+                    <div>
+                        <label for="username">Username</label><span id="user_info" class="error-info"></span>
+                    </div>
+                    <div>
+                        <input name="user_name" id="user_name" type="text"
+                            class="demo-input-box">
+                    </div>
+                </div>
+                <div class="field-column">
+                    <div>
+                        <label for="password">Password</label><span id="password_info" class="error-info"></span>
+                    </div>
+                    <div>
+                        <input name="password" id="password" type="password"
+                            class="demo-input-box">
+                    </div>
+                </div>
+                <div class=field-column>
+                    <div>
+                        <input type="submit" name="login" value="Login"
+                        class="btnLogin"></span>
+                    </div>
+                </div>
+            </div>
+        </form>
+       <script>
     function validate() {
         var $valid = true;
         document.getElementById("user_info").innerHTML = "";
@@ -167,133 +164,7 @@ a.logout-button {
         return $valid;
     }
     </script>
-<?php
-namespace Phppot;
-
-use \Phppot\Member;
-if (! empty($_POST["login"])) {
-    session_start();
-    $username = filter_var($_POST["user_name"], FILTER_SANITIZE_STRING);
-    $password = filter_var($_POST["password"], FILTER_SANITIZE_STRING);
-    require_once (__DIR__ . "./class/Member.php");
-    
-    $member = new Member();
-    $isLoggedIn = $member->processLogin($username, $password);
-    if (! $isLoggedIn) {
-        $_SESSION["errorMessage"] = "Invalid Credentials";
-    }
-    header("Location: ./index.php");
-    exit();
-}
-<?php
-namespace Phppot;
-
-use \Phppot\Member;
-
-if (! empty($_SESSION["userId"])) {
-    require_once __DIR__ . './../class/Member.php';
-    $member = new Member();
-    $memberResult = $member->getMemberById($_SESSION["userId"]);
-    if(!empty($memberResult[0]["display_name"])) {
-        $displayName = ucwords($memberResult[0]["display_name"]);
-    } else {
-        $displayName = $memberResult[0]["user_name"];
-    }
-}
-?>
-<html>
-<head>
-<title>User Login</title>
-<link href="./view/css/style.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-    <div>
-        <div class="dashboard">
-            <div class="member-dashboard">Welcome <b><?php echo $displayName; ?></b>, You have successfully logged in!<br>
-                Click to <a href="./logout.php" class="logout-button">Logout</a>
-            </div>
-        </div>
+ 
     </div>
-<?php
-namespace Phppot;
-
-use \Phppot\DataSource;
-
-class Member
-{
-
-    private $dbConn;
-
-    private $ds;
-
-    function __construct()
-    {
-        require_once "DataSource.php";
-        $this->ds = new DataSource();
-    }
-
-    function getMemberById($memberId)
-    {
-        $query = "select * FROM registered_users WHERE id = ?";
-        $paramType = "i";
-        $paramArray = array($memberId);
-        $memberResult = $this->ds->select($query, $paramType, $paramArray);
-        
-        return $memberResult;
-    }
-    
-    public function processLogin($username, $password) {
-        $passwordHash = md5($password);
-        $query = "select * FROM registered_users WHERE user_name = ? AND password = ?";
-        $paramType = "ss";
-        $paramArray = array($username, $passwordHash);
-        $memberResult = $this->ds->select($query, $paramType, $paramArray);
-        if(!empty($memberResult)) {
-            $_SESSION["userId"] = $memberResult[0]["id"];
-            return true;
-        }
-    }
-}
-<?php 
-session_start();
-$_SESSION["user_id"] = "";
-session_destroy();
-header("Location: index.php");
-<?php
-namespace Phppot;
-
-/**
- * Generic datasource class for handling DB operations.
- * Uses MySqli and PreparedStatements.
- *
- * @version 2.3
- */
-class DataSource
-{
-
-    // PHP 7.1.0 visibility modifiers are allowed for class constants.
-    // when using above 7.1.0, declare the below constants as private
-    const HOST = 'localhost';
-
-    const USERNAME = 'root';
-
-    const PASSWORD = '';
-
-    const DATABASENAME = 'phpsamples';
-
-    private $conn;
-
-    /**
-     * PHP implicitly takes care of cleanup for default connection types.
-     * So no need to worry about closing the connection.
-     *
-     * Singletons not required in PHP as there is no
-     * concept of shared memory.
-     * Every object lives only for a request.
-     *
-     * Keeping things simple and that works!
-     */
-    function __construct()
-    {
-        $this->conn = $this->getConnection();
-    }
+</body>
+</html>
