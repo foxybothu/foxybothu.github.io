@@ -1,0 +1,374 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+<title>Ökológiai lábnyom számítás</title>
+<style type="text/css">
+<!--
+body,td,th {
+	color: #000000;
+	font-family: Verdana;
+	font-size: 16px;
+}
+body {
+	background-color: #e7e3c6;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+h1 {
+	font-size: 24px;
+	float: left;
+	width: 100%;
+	height: 30px;
+	padding: 20px;
+	float: left;
+	width: 100%;
+	margin: 0px;
+	}
+.radiotooltip {
+	font-size: 10px;
+	color: red;
+	}
+.buttonstyle {
+	font-family: Verdana;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #999999;
+	color: black;
+	border: 1px; solid #333333;
+	border-left: 1px solid #BBBBBB;
+	border-top: 1px solid #BBBBBB;
+	}
+form {
+	margin: 0px;
+	padding: 0px;
+	}
+
+a {
+	text-decoration: none;	
+	color: #000000;
+	font-weight: bold;
+	}
+a:hover {
+	color: #999999;
+	text-decoration: none;	
+	}
+-->
+</style></head>
+
+<body>
+
+<form method="post">
+<input type="hidden" name="formaction" value="send">
+<table style="background-image: url(images/mainbg.jpg); background-repeat: no-repeat; background-color: #e2e3c2;" width="800" cellspacing="0" cellpadding="0" align="center">
+<tbody><tr>
+<td>
+
+<h1 style="margin: 0;">Ökológiai lábnyom számítás</h1>
+<h4 style="padding: 20px; margin: 0; width: 600px;">Jelen ökológiai lábnyom számítás egy átlagpolgár feltételezhető
+fogyasztási szokásainak átszámolási metodikájával készült (lakás,
+étkezés, közlekedés, beszerzés-vásárlás,  hulladék)
+</h4>
+
+</td>
+</tr>
+</tbody></table>
+<table style="background-image: url(images/mainbg.jpg); background-repeat: no-repeat; background-color: #e2e3c2;" width="800" cellspacing="0" cellpadding="0" align="center">
+<tbody><tr>
+<td colspan="3">
+<h1>I. Lakás</h1>
+</td>
+</tr>
+<tr>
+<td width="1%" bgcolor="#abdc7d">
+<img src="images/logo1.gif" hspace="40">
+</td>
+<td style="background-image: url(images/bg1.jpg); background-repeat: repeat-y; padding: 10px;">
+	<b>a.) Mekkora az Ön háztartásában az egy főre jutó lakóterület?</b><br>		<div id="tooltippdata1" class="radiotooltip"></div>
+		<script>
+		function settooltippdata1(a) {
+			if (a) document.getElementById('tooltippdata1').innerHTML = a;
+			}
+		</script>				<input type="radio" onclick="settooltippdata1('');" name="pdata1" value="10" style="border: 0px; background-image: none; background: none;" checked=""> 20 m<sup>2</sup> vagy kisebb<br>				<input type="radio" onclick="settooltippdata1('');" name="pdata1" value="15" style="border: 0px; background-image: none; background: none;"> 30 m<sup>2</sup><br>				<input type="radio" onclick="settooltippdata1('');" name="pdata1" value="20" style="border: 0px; background-image: none; background: none;"> 40 m<sup>2</sup><br>				<input type="radio" onclick="settooltippdata1('');" name="pdata1" value="25" style="border: 0px; background-image: none; background: none;"> 50 m<sup>2</sup><br>				<input type="radio" onclick="settooltippdata1('');" name="pdata1" value="30" style="border: 0px; background-image: none; background: none;"> 60 m<sup>2</sup> vagy több<br></td>
+<td rowspan="10" width="200" valign="bottom" align="right">
+</td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+
+<td bgcolor="#87cb59">
+<img src="images/logo2.gif" hspace="40">
+</td>
+<td style="background-image: url(images/bg2.jpg); background-repeat: repeat-y; padding: 10px;">	<b>b.) Mivel fűti Ön a házát?</b><br>		<div id="tooltippdata2" class="radiotooltip"></div>
+		<script>
+		function settooltippdata2(a) {
+			if (a) document.getElementById('tooltippdata2').innerHTML = a;
+			}
+		</script>				<input type="radio" onclick="settooltippdata2('');" name="pdata2" value="30" style="border: 0px; background-image: none; background: none;" checked=""> Földgáz<br>				<input type="radio" onclick="settooltippdata2('');" name="pdata2" value="40" style="border: 0px; background-image: none; background: none;"> Villamos áram<br>				<input type="radio" onclick="settooltippdata2('');" name="pdata2" value="50" style="border: 0px; background-image: none; background: none;"> Olaj/szén<br>				<input type="radio" onclick="settooltippdata2('');" name="pdata2" value="0" style="border: 0px; background-image: none; background: none;"> Megújuló energia/fa<br>				<input type="radio" onclick="settooltippdata2('');" name="pdata2" value="15" style="border: 0px; background-image: none; background: none;"> Vegyes tüzelés (megújuló és nem megújuló energiaforrás)<br>				<input type="radio" onclick="settooltippdata2('');" name="pdata2" value="20" style="border: 0px; background-image: none; background: none;"> Távhő<br></td></tr><tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+
+<td bgcolor="#58bd3c">
+<img src="images/logo3.gif" hspace="40">
+</td>
+<td style="background-image: url(images/bg3.jpg); background-repeat: repeat-y; padding: 10px;">	<b>c.) Az alábbiak közül mely megoldást alkalmazza Ön a háztartásában?</b><br>		<div id="tooltippdata3" class="radiotooltip"></div>
+		<script>
+		function settooltippdata3(a) {
+			if (a) document.getElementById('tooltippdata3').innerHTML = a;
+			}
+		</script>				<input type="radio" onclick="settooltippdata3('');" name="pdata3" value="5" style="border: 0px; background-image: none; background: none;" checked=""> Víztakarékos WC, víztakarékos csap/tusolófej, esővízzel öntözök<br>				<input type="radio" onclick="settooltippdata3('');" name="pdata3" value="10" style="border: 0px; background-image: none; background: none;"> Víztakarékos WC, víztakarékos csap/tusolófej<br>				<input type="radio" onclick="settooltippdata3('');" name="pdata3" value="15" style="border: 0px; background-image: none; background: none;"> Víztakarékos WC<br>				<input type="radio" onclick="settooltippdata3('');" name="pdata3" value="20" style="border: 0px; background-image: none; background: none;"> Saját vízórám van, figyelemmel követem a fogyasztást<br>				<input type="radio" onclick="settooltippdata3('');" name="pdata3" value="25" style="border: 0px; background-image: none; background: none;"> Nem alkalmazok víztakarékos megoldást, berendezést<br></td></tr><tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+
+<td bgcolor="#58bd3c">
+<img src="images/logo4.gif" hspace="40">
+</td>
+<td style="background-image: url(images/bg3.jpg); background-repeat: repeat-y; padding: 10px;">	<b>d.) Milyen építőanyagból készült a ház ahol Ön él?</b><br>		<div id="tooltippdata4" class="radiotooltip"></div>
+		<script>
+		function settooltippdata4(a) {
+			if (a) document.getElementById('tooltippdata4').innerHTML = a;
+			}
+		</script>				<input type="radio" onclick="settooltippdata4('');" name="pdata4" value="20" style="border: 0px; background-image: none; background: none;" checked=""> Panel<br>				<input type="radio" onclick="settooltippdata4('');" name="pdata4" value="15" style="border: 0px; background-image: none; background: none;"> Tégla<br>				<input type="radio" onclick="settooltippdata4('');" name="pdata4" value="10" style="border: 0px; background-image: none; background: none;"> Gerenda/fa<br>				<input type="radio" onclick="settooltippdata4('');" name="pdata4" value="5" style="border: 0px; background-image: none; background: none;"> Vályog/föld<br>				<input type="radio" onclick="settooltippdata4('');" name="pdata4" value="0" style="border: 0px; background-image: none; background: none;"> Szalmabála<br></td>
+</tr>
+</tbody></table>
+
+<table style="background-image: url(images/mainbg.jpg); background-repeat: no-repeat; background-color: #e2e3c2;" width="800" cellspacing="0" cellpadding="0" align="center">
+<tbody><tr>
+<td colspan="3">
+<h1>II. Étkezés</h1>
+</td>
+</tr>
+<tr>
+<td width="1%" bgcolor="#abdc7d">
+<img src="images/logo5.gif" hspace="40">
+</td>
+<td style="background-image: url(images/bg1.jpg); background-repeat: repeat-y; padding: 10px;">
+	<b>a.) Mennyi zöldséget és mennyi húst eszik Ön egy héten?</b><br>		<div id="tooltippdata5" class="radiotooltip"></div>
+		<script>
+		function settooltippdata5(a) {
+			if (a) document.getElementById('tooltippdata5').innerHTML = a;
+			}
+		</script>				<input type="radio" onclick="settooltippdata5('');" name="pdata5" value="0" style="border: 0px; background-image: none; background: none;" checked=""> Vegetáriánus vagyok<br>				<input type="radio" onclick="settooltippdata5('');" name="pdata5" value="15" style="border: 0px; background-image: none; background: none;"> Kevés húst eszem (naponta egyszer)<br>				<input type="radio" onclick="settooltippdata5('');" name="pdata5" value="25" style="border: 0px; background-image: none; background: none;"> Normál mennyiségű húst eszem (50-50%)<br>				<input type="radio" onclick="settooltippdata5('');" name="pdata5" value="50" style="border: 0px; background-image: none; background: none;"> "Húsevő" vagyok (szinte minden étkezéshez)<br></td>
+<td rowspan="10" width="200" valign="bottom" align="right">
+</td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+
+<td bgcolor="#87cb59">
+<img src="images/logo6.gif" hspace="40">
+</td>
+<td style="background-image: url(images/bg2.jpg); background-repeat: repeat-y; padding: 10px;">	<b>b.) Egy héten hányszor eszik Ön otthon készített ételt (1 hét 21 étkezés)?</b><br>		<div id="tooltippdata6" class="radiotooltip"></div>
+		<script>
+		function settooltippdata6(a) {
+			if (a) document.getElementById('tooltippdata6').innerHTML = a;
+			}
+		</script>				<input type="radio" onclick="settooltippdata6('');" name="pdata6" value="25" style="border: 0px; background-image: none; background: none;" checked=""> 10-nél kevesebbszer<br>				<input type="radio" onclick="settooltippdata6('');" name="pdata6" value="20" style="border: 0px; background-image: none; background: none;"> 10-14<br>				<input type="radio" onclick="settooltippdata6('');" name="pdata6" value="15" style="border: 0px; background-image: none; background: none;"> 14-18<br>				<input type="radio" onclick="settooltippdata6('');" name="pdata6" value="10" style="border: 0px; background-image: none; background: none;"> 18-nál többször<br></td></tr><tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+
+<td bgcolor="#58bd3c">
+<img src="images/logo7.gif" hspace="40">
+</td>
+<td style="background-image: url(images/bg3.jpg); background-repeat: repeat-y; padding: 10px;">	<b>c.) Ha ételt vásárol, igyekszik hazai/helyi terméket venni?</b><br>		<div id="tooltippdata7" class="radiotooltip"></div>
+		<script>
+		function settooltippdata7(a) {
+			if (a) document.getElementById('tooltippdata7').innerHTML = a;
+			}
+		</script>				<input type="radio" onclick="settooltippdata7('');" name="pdata7" value="25" style="border: 0px; background-image: none; background: none;" checked=""> Igen, kizárólag<br>				<input type="radio" onclick="settooltippdata7('');" name="pdata7" value="125" style="border: 0px; background-image: none; background: none;"> Nem<br>				<input type="radio" onclick="settooltippdata7('');" name="pdata7" value="50" style="border: 0px; background-image: none; background: none;"> Néha<br>				<input type="radio" onclick="settooltippdata7('');" name="pdata7" value="100" style="border: 0px; background-image: none; background: none;"> Nem tudom<br>				<input type="radio" onclick="settooltippdata7('');" name="pdata7" value="30" style="border: 0px; background-image: none; background: none;"> Amennyiben van rá lehetőségem, mindig<br></td>
+</tr>
+</tbody></table>
+
+<table style="background-image: url(images/mainbg.jpg); background-repeat: no-repeat; background-color: #e2e3c2;" width="800" cellspacing="0" cellpadding="0" align="center">
+<tbody><tr>
+<td colspan="3">
+<h1>III. Közlekedés</h1>
+</td>
+</tr>
+<tr>
+<td width="1%" bgcolor="#abdc7d">
+<img src="images/logo8.gif" hspace="40">
+</td>
+<td style="background-image: url(images/bg1.jpg); background-repeat: repeat-y; padding: 10px;">
+	<b>a.) Milyen járművet használ Ön?</b><br>		<div id="tooltippdata8" class="radiotooltip"></div>
+		<script>
+		function settooltippdata8(a) {
+			if (a) document.getElementById('tooltippdata8').innerHTML = a;
+			}
+		</script>				<input type="radio" onclick="settooltippdata8('');" name="pdata8" value="0" style="border: 0px; background-image: none; background: none;" checked=""> Kerékpár/nincs járművem<br>				<input type="radio" onclick="settooltippdata8('');" name="pdata8" value="50" style="border: 0px; background-image: none; background: none;"> Kisautó vagy középkategóriás autó<br>				<input type="radio" onclick="settooltippdata8('');" name="pdata8" value="30" style="border: 0px; background-image: none; background: none;"> Motor<br>				<input type="radio" onclick="settooltippdata8('');" name="pdata8" value="75" style="border: 0px; background-image: none; background: none;"> Nagy családi autó<br>				<input type="radio" onclick="settooltippdata8('');" name="pdata8" value="10" style="border: 0px; background-image: none; background: none;"> Van autóm, de csak a legszükségesebb esetekben használom<br>				<input type="radio" onclick="settooltippdata8('');" name="pdata8" value="100" style="border: 0px; background-image: none; background: none;"> Sportkocsi vagy kisteherautó, terepjáró<br>				<input type="radio" onclick="settooltippdata8('');" name="pdata8" value="20" style="border: 0px; background-image: none; background: none;"> Hibrid vagy elektromos autó<br>				<input type="radio" onclick="settooltippdata8('');" name="pdata8" value="130" style="border: 0px; background-image: none; background: none;"> Teherautó<br></td>
+<td rowspan="10" width="200" valign="bottom" align="right">
+</td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+
+<td bgcolor="#87cb59">
+<img src="images/logo9.gif" hspace="40">
+</td>
+<td style="background-image: url(images/bg2.jpg); background-repeat: repeat-y; padding: 10px;">	<b>b.) Mivel jár általában iskolába/munkába?</b><br>		<div id="tooltippdata9" class="radiotooltip"></div>
+		<script>
+		function settooltippdata9(a) {
+			if (a) document.getElementById('tooltippdata9').innerHTML = a;
+			}
+		</script>				<input type="radio" onclick="settooltippdata9('');" name="pdata9" value="40" style="border: 0px; background-image: none; background: none;"> Autóval - egyedül<br>				<input type="radio" onclick="settooltippdata9('');" name="pdata9" value="15" style="border: 0px; background-image: none; background: none;"> Tömegközlekedéssel<br>				<input type="radio" onclick="settooltippdata9('');" name="pdata9" value="10" style="border: 0px; background-image: none; background: none;"> Iskolabusszal/vállalati busszal<br>				<input type="radio" onclick="settooltippdata9('');" name="pdata9" value="30" style="border: 0px; background-image: none; background: none;"> Autóval - többen<br>				<input type="radio" onclick="settooltippdata9('');" name="pdata9" value="0" style="border: 0px; background-image: none; background: none;"> Gyalog, kerékpárral, görkorival<br></td></tr><tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+
+<td bgcolor="#58bd3c">
+<img src="images/logo10.gif" hspace="40">
+</td>
+<td style="background-image: url(images/bg3.jpg); background-repeat: repeat-y; padding: 10px;">	<b>c.) Használ-e tömegközlekedési eszközt?</b><br>		<div id="tooltippdata10" class="radiotooltip"></div>
+		<script>
+		function settooltippdata10(a) {
+			if (a) document.getElementById('tooltippdata10').innerHTML = a;
+			}
+		</script>				<input type="radio" onclick="settooltippdata10('');" name="pdata10" value="0" style="border: 0px; background-image: none; background: none;" checked=""> Nem, mert nincs<br>				<input type="radio" onclick="settooltippdata10('');" name="pdata10" value="5" style="border: 0px; background-image: none; background: none;"> Igen, amikor szükséges mindig<br>				<input type="radio" onclick="settooltippdata10('');" name="pdata10" value="10" style="border: 0px; background-image: none; background: none;"> Igen, gyakran<br>				<input type="radio" onclick="settooltippdata10('');" name="pdata10" value="25" style="border: 0px; background-image: none; background: none;"> Ritkán<br>				<input type="radio" onclick="settooltippdata10('');" name="pdata10" value="50" style="border: 0px; background-image: none; background: none;"> Nem használom, mert nem szeretem a tömegközlekedést vagy autóval járok<br></td></tr><tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+
+<td bgcolor="#00a542">
+<img src="images/logo12.gif" hspace="40">
+</td>
+<td style="background-image: url(images/bg4.jpg); background-repeat: repeat-y; padding: 10px;">	<b>d.)Hol volt az elmúlt évben nyaralni (a legtávolabbi cél)?</b><br>		<div id="tooltippdata11" class="radiotooltip"></div>
+		<script>
+		function settooltippdata11(a) {
+			if (a) document.getElementById('tooltippdata11').innerHTML = a;
+			}
+		</script>				<input type="radio" onclick="settooltippdata11('');" name="pdata11" value="0" style="border: 0px; background-image: none; background: none;" checked=""> Nem voltam nyaralni<br>				<input type="radio" onclick="settooltippdata11('');" name="pdata11" value="10" style="border: 0px; background-image: none; background: none;"> Belföldön busszal/vonattal<br>				<input type="radio" onclick="settooltippdata11('');" name="pdata11" value="50" style="border: 0px; background-image: none; background: none;"> Külföldön, Európában vonattal/busszal<br>				<input type="radio" onclick="settooltippdata11('');" name="pdata11" value="30" style="border: 0px; background-image: none; background: none;"> Belföldön autóval<br>				<input type="radio" onclick="settooltippdata11('');" name="pdata11" value="70" style="border: 0px; background-image: none; background: none;"> Külföldön, Európában autóval<br>				<input type="radio" onclick="settooltippdata11('');" name="pdata11" value="110" style="border: 0px; background-image: none; background: none;"> Külföldön, Európán kívül repülővel<br>				<input type="radio" onclick="settooltippdata11('');" name="pdata11" value="90" style="border: 0px; background-image: none; background: none;"> Külföldön, Európában repülővel<br></td>
+</tr>
+</tbody></table>
+
+<table style="background-image: url(images/mainbg.jpg); background-repeat: no-repeat; background-color: #e2e3c2;" width="800" cellspacing="0" cellpadding="0" align="center">
+<tbody><tr>
+<td colspan="3">
+<h1>IV. Beszerzés, vásárlás</h1>
+</td>
+</tr>
+<tr>
+<td width="1%" bgcolor="#abdc7d">
+<img src="images/logo13.gif" hspace="40">
+</td>
+<td style="background-image: url(images/bg1.jpg); background-repeat: repeat-y; padding: 10px;">
+	<b>a.) Hány nagyobb háztartási beruházása (pl. tartós fogyasztási cikk vásárlás, lakásátalakítás) volt az elmúlt 3 évben?</b><br>		<div id="tooltippdata12" class="radiotooltip"></div>
+		<script>
+		function settooltippdata12(a) {
+			if (a) document.getElementById('tooltippdata12').innerHTML = a;
+			}
+		</script>				<input type="radio" onclick="settooltippdata12('');" name="pdata12" value="0" style="border: 0px; background-image: none; background: none;" checked=""> Egy sem<br>				<input type="radio" onclick="settooltippdata12('');" name="pdata12" value="15" style="border: 0px; background-image: none; background: none;"> 1-3<br>				<input type="radio" onclick="settooltippdata12('');" name="pdata12" value="20" style="border: 0px; background-image: none; background: none;"> 4-6<br>				<input type="radio" onclick="settooltippdata12('');" name="pdata12" value="25" style="border: 0px; background-image: none; background: none;"> 6-nál több<br></td>
+<td rowspan="10" width="200" valign="bottom" align="right">
+</td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+
+<td bgcolor="#87cb59">
+<img src="images/logo14.gif" hspace="40">
+</td>
+<td style="background-image: url(images/bg2.jpg); background-repeat: repeat-y; padding: 10px;">	<b>b.) Döntései során milyen gyakran választ energiatakarékos berendezést?</b><br>		<div id="tooltippdata13" class="radiotooltip"></div>
+		<script>
+		function settooltippdata13(a) {
+			if (a) document.getElementById('tooltippdata13').innerHTML = a;
+			}
+		</script>				<input type="radio" onclick="settooltippdata13('');" name="pdata13" value="50" style="border: 0px; background-image: none; background: none;" checked=""> Nem figyelek rá<br>				<input type="radio" onclick="settooltippdata13('');" name="pdata13" value="35" style="border: 0px; background-image: none; background: none;"> Ritkán<br>				<input type="radio" onclick="settooltippdata13('');" name="pdata13" value="25" style="border: 0px; background-image: none; background: none;"> Berendezéseim fele ilyen<br>				<input type="radio" onclick="settooltippdata13('');" name="pdata13" value="10" style="border: 0px; background-image: none; background: none;"> A berendezéseim több mint fele ilyen<br>				<input type="radio" onclick="settooltippdata13('');" name="pdata13" value="0" style="border: 0px; background-image: none; background: none;"> Mindig energiatakarékos berendezést veszek<br></td>
+</tr>
+</tbody></table>
+
+<table style="background-image: url(images/mainbg.jpg); background-repeat: no-repeat; background-color: #e2e3c2;" width="800" cellspacing="0" cellpadding="0" align="center">
+<tbody><tr>
+<td colspan="3">
+<h1>V. Hulladék</h1>
+</td>
+</tr>
+<tr>
+<td width="1%" bgcolor="#abdc7d">
+<img src="images/logo15.gif" hspace="40">
+</td>
+<td style="background-image: url(images/bg1.jpg); background-repeat: repeat-y; padding: 10px;">
+	<b>a.) Igyekszik Ön a háztartásban csökkenteni a hulladékot?</b><br>		<div id="tooltippdata14" class="radiotooltip"></div>
+		<script>
+		function settooltippdata14(a) {
+			if (a) document.getElementById('tooltippdata14').innerHTML = a;
+			}
+		</script>				<input type="radio" onclick="settooltippdata14('');" name="pdata14" value="0" style="border: 0px; background-image: none; background: none;" checked=""> Igen már a vásárlásnál és a háztartásban (nagy kiszerelésben vásárolok és nem veszek/fogadok el eldobható zacskót, így kevés csomagolási hulladékom lesz)<br>				<input type="radio" onclick="settooltippdata14('');" name="pdata14" value="10" style="border: 0px; background-image: none; background: none;"> Sokszor<br>				<input type="radio" onclick="settooltippdata14('');" name="pdata14" value="20" style="border: 0px; background-image: none; background: none;"> Ritkán<br>				<input type="radio" onclick="settooltippdata14('');" name="pdata14" value="30" style="border: 0px; background-image: none; background: none;"> Soha<br></td>
+<td rowspan="10" width="200" valign="bottom" align="right">
+</td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+
+<td bgcolor="#87cb59">
+<img src="images/logo16.gif" hspace="40">
+</td>
+<td style="background-image: url(images/bg2.jpg); background-repeat: repeat-y; padding: 10px;">	<b>b.) Komposztál-e Ön a háztartásában?</b><br>		<div id="tooltippdata15" class="radiotooltip"></div>
+		<script>
+		function settooltippdata15(a) {
+			if (a) document.getElementById('tooltippdata15').innerHTML = a;
+			}
+		</script>				<input type="radio" onclick="settooltippdata15('');" name="pdata15" value="0" style="border: 0px; background-image: none; background: none;" checked=""> Igen, mindig<br>				<input type="radio" onclick="settooltippdata15('');" name="pdata15" value="10" style="border: 0px; background-image: none; background: none;"> Sokszor<br>				<input type="radio" onclick="settooltippdata15('');" name="pdata15" value="15" style="border: 0px; background-image: none; background: none;"> Ritkán<br>				<input type="radio" onclick="settooltippdata15('');" name="pdata15" value="20" style="border: 0px; background-image: none; background: none;"> Soha<br>				<input type="radio" onclick="settooltippdata15('');" name="pdata15" value="10" style="border: 0px; background-image: none; background: none;"> Nincs rá lehetőségem<br></td></tr><tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+
+<td bgcolor="#58bd3c">
+<img src="images/logo17.gif" hspace="40">
+</td>
+<td style="background-position: 0px 0px; background-image: url(images/bg3.jpg); background-repeat: repeat-y; padding: 10px;">	<b>c.) Újrahasznál-e Ön bármilyen hulladékot (papír, üveg stb.) vagy szelektíven gyűjti-e a hulladékot?</b><br>		<div id="tooltippdata16" class="radiotooltip"></div>
+		<script>
+		function settooltippdata16(a) {
+			if (a) document.getElementById('tooltippdata16').innerHTML = a;
+			}
+		</script>				<input type="radio" onclick="settooltippdata16('');" name="pdata16" value="0" style="border: 0px; background-image: none; background: none;" checked=""> Igen<br>				<input type="radio" onclick="settooltippdata16('');" name="pdata16" value="10" style="border: 0px; background-image: none; background: none;"> Gyakran (amit csak lehet, újra használok)<br>				<input type="radio" onclick="settooltippdata16('');" name="pdata16" value="15" style="border: 0px; background-image: none; background: none;"> Ritkán (előfordul, hogy újra használok dolgokat)<br>				<input type="radio" onclick="settooltippdata16('');" name="pdata16" value="25" style="border: 0px; background-image: none; background: none;"> Soha<br></td></tr><tr>
+<td>&nbsp;</td>
+</tr>
+<tr>
+
+<td bgcolor="#00a542">
+<img src="images/logo18.gif" hspace="40">
+</td>
+<td style="background-position: 0px 0px; background-image: url(images/bg4.jpg); background-repeat: repeat-y; padding: 10px;">	<b>d.) Hetente hány zsák (10-20 literes) szemét keletkezik a háztartásában?</b><br>		<div id="tooltippdata17" class="radiotooltip"></div>
+		<script>
+		function settooltippdata17(a) {
+			if (a) document.getElementById('tooltippdata17').innerHTML = a;
+			}
+		</script>				<input type="radio" onclick="settooltippdata17('');" name="pdata17" value="0" style="border: 0px; background-image: none; background: none;" checked=""> Egy sem<br>				<input type="radio" onclick="settooltippdata17('');" name="pdata17" value="5" style="border: 0px; background-image: none; background: none;"> Egy zsák<br>				<input type="radio" onclick="settooltippdata17('');" name="pdata17" value="20" style="border: 0px; background-image: none; background: none;"> Két zsák<br>				<input type="radio" onclick="settooltippdata17('');" name="pdata17" value="40" style="border: 0px; background-image: none; background: none;"> Több, mint két zsák<br></td>
+</tr>
+</tbody></table>
+<table style="background-color: #eef1cd;" width="800" cellspacing="0" cellpadding="0" align="center">
+<tbody><tr>
+<td colspan="3" align="center">
+<br>
+<center>
+A program a KÖVET Egyesület és a Környezeti Tanácsadó Irodák Hálózata (Kötháló)<br>
+együttműködésében valósult meg.
+</center>
+
+<br>
+<input type="submit" value="Értékelés!" class="buttonstyle">
+<br>
+<br>
+</td>
+</tr>
+</tbody></table>
+</form>
+
+</body></html>
