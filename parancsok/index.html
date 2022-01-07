@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Jelentkezések - Foxy bot</title>
+        <title>Parancsok - Foxy bot</title>
 <html lang="hu"><head>
 	<meta data-n-head="1" data-hid="og:type" name="og:type" content="website">
 	<meta data-n-head="1" data-hid="og:site_name" name="og:site_name" content="Foxy Bot">
@@ -334,22 +334,106 @@ function scrollFunction() {
   <p>Egy jó bot :D</p> 
 	<a type="button" class="btn btn-info" href="/#mégnincsdc"><span>Discord szerver</span></a>
 </div>
- <div class="jelentkezés-text">
-            <h1>Jelentkezések:</h1>
-            <h2>Support</h2>
-          <h1>Feltételek:<h1>
-            <h3>Foxy bot teljes fokú ismerete<h3>
-              <h3>Légy 11 MINIMUM<h3>
-                <h1>Dolga:<h1>
-                  <h3>Segíteni annak aki nem tudja <ezt>/<azt><h3>
-            <a class="link" href="https://foxybothu.github.io/web/">Vissza a kezdőlapra</a>
-        </div>
-<!-- Container (About Section) -->
-<div id="about" class="container-fluid">
-  <div class="row">
-    <div class="col-sm-8">
-      
-</div>
+
+								 
+								 
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+</head>
+<body>
+
+<h1>Parancsok</h1>
+<h6><strong>Paraméterek:<strong><h6>
+<p>{}=kötelező
+[]=nem kötelező<p>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Keress parancsra névből/benne lévő adatból" title="Írj be parancsot!">
+
+
+<ul id="myUL">
+<li>
+<a>
+<div class="card" style="width:20rem;" >
+ <!-- <img class="card-img-top" src=""  alt="Card image top">-->
+  <div class="card-body">
+    <h3 class="card-title">-ban</h3>
+    <h4 class="card-subtitle">Banolhatsz vele embereket.</h4>
+    <p class="card-text">-ban {ember/id} [indok/üresen hagyod]</p>
+  </div>
+</div>   
+</a>
+</li>
+
+
+
+
+
+</ul>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+								 
+								 
+								 
+								 
+								 
 <style>
 
 
