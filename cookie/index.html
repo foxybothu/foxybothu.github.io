@@ -1,0 +1,493 @@
+<html lang="hu"><head>
+        <meta charset="utf-8">
+        <title>Parancsok - Foxy bot</title>
+
+	<meta data-n-head="1" data-hid="og:type" name="og:type" content="website">
+	<meta data-n-head="1" data-hid="og:site_name" name="og:site_name" content="Foxy Bot">
+	    <meta charset="UTF-8">
+         <meta name="description" content="Foxy bot hivatalos weboldal.
+					Nagyon szuper magyar bot.">
+    <link rel="shortcut icon" href="https://cdn.discordapp.com/avatars/781172469603893309/0b11f79613ef1c4a05cb3661d3aeea03.png" type="image/x-icon">
+<meta property="og:image" content="https://cdn.discordapp.com/avatars/781172469603893309/0b11f79613ef1c4a05cb3661d3aeea03.png">
+<meta property="og:url" content="https://foxybothu.github.io/">						
+											   
+         <meta name="author" content="TutiCraft">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" href="style.css">
+         
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #fff;
+  }
+  
+	  .scrollbar {
+	  scrollbar-color: dodgerblue #dedede;
+	  }
+	  
+  h1 {
+    font-size: 24px;
+    color: #000000;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+  h2 {
+    font-size: 24px;
+    color: #000000;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 24px;
+    line-height: 1.375em;
+    color: #f0690a;
+    font-weight: 800;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-color: #fff;
+    color: #000;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #fff;
+  }
+  .logo-small {
+    color: #000;
+    font-size: 50px;
+  }
+  .logo {
+    color: #f1f1f1;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #000;
+  }
+  .carousel-indicators li {
+    border-color: #000;
+  }
+  .carousel-indicators li.active {
+    background-color: #000;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #000; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #fff;
+    background-color: #fff !important;
+    color: #fff;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #fff !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #fff;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #fff;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #000;
+  }
+  .glyphicon {
+  color: #000;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="foxy" data-spy="scroll" data-target=".navbar" data-offset="60">
+<style>
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 90px 10px;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+
+#navbar a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+#navbar #logo {
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+#navbar-right {
+  float: right;
+}
+
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important;
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  #navbar-right {
+    float: none;
+  }
+}
+</style>
+
+
+
+        
+<div id="navbar" style="padding: 30px 10px;">
+  <a href="/" id="logo" style="font-size: 25px;">Foxy Bot</a>
+  <div id="navbar-right">
+    <a class="active" href="/">Kezdőlap</a>
+    <a href="https://discord.com/login?redirect_to=%2Foauth2%2Fauthorize%3Fclient_id%3D781172469603893309%26permissions%3D2080374975%26redirect_uri%3Dhttps%253A%252F%252Ffoxybotdc.weebly.com%252Fthankyoumessageforinvitethefoxybotthxerroroff.html%26response_type%3Dcode%26scope%3Didentify%2520bot%2520guilds">Invite</a>
+    <a href="#mitkinalunk">Mit kínálunk?</a>
+        <a href="#about">Rólunk</a>
+    <a href="#comments">Commentek</a>
+    <a href="#contact">Kapcsolat</a>
+  </div>
+</div>
+<h1>.</h1><h1>
+</h1><h1>.</h1><h1>
+</h1><h1>.</h1><h1>
+</h1><h1></h1><h1>
+
+<!-- <div style="margin-top:210px;padding:15px 15px 2500px;font-size:30px">
+ <div>-->
+
+<script>
+// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("navbar").style.padding = "30px 10px";
+    document.getElementById("logo").style.fontSize = "25px";
+  } else {
+    document.getElementById("navbar").style.padding = "80px 10px";
+    document.getElementById("logo").style.fontSize = "35px";
+  }
+}
+</script>
+     
+
+
+      
+    
+  
+
+
+<div class="jumbotron text-center">
+  <h1>Foxy bot</h1> 
+  <p>Egy jó bot :D</p> 
+	<a type="button" class="btn btn-info" href="/#mégnincsdc"><span>Discord szerver</span></a>
+</div>
+
+	                           
+							 
+			<article class="blog-content">
+                <div class="entry-content">
+                    <p></p><div id="cookieAlertBoxDetails">
+<h4>Süti („cookie”) Információ</h4>
+
+<p>Weboldalunkon „cookie”-kat (továbbiakban „süti”) alkalmazunk. Ezek olyan fájlok, melyek információt tárolnak webes böngészőjében. Ehhez az Ön hozzájárulása szükséges.<br>
+A „sütiket” az elektronikus hírközlésről szóló 2003. évi C. törvény, az elektronikus kereskedelmi szolgáltatások, az információs társadalommal összefüggő szolgáltatások egyes kérdéseiről szóló 2001. évi CVIII. törvény, valamint az Európai Unió előírásainak megfelelően használjuk.<br>
+Azon weblapoknak, melyek az Európai Unió országain belül működnek, a „sütik” használatához, és ezeknek a felhasználó számítógépén vagy egyéb eszközén történő tárolásához a felhasználók hozzájárulását kell kérniük.</p>
+
+<h4>1. „Sütik” használatának szabályzata</h4>
+
+<p>Ez a szabályzat a <span id="domainNameToCookieInformation">domain név</span> weboldal „sütijeire” vonatkozik.</p>
+
+<h4>2. Mik azok a „sütik”?</h4>
+
+<p>A „sütik” olyan kisméretű fájlok, melyek betűket és számokat tartalmaznak. A „süti” a webszerver és a felhasználó böngészője közötti információcsere eszköze. Ezek az adatfájlok nem futtathatók, nem tartalmaznak kémprogramokat és vírusokat, továbbá nem férhetnek hozzá a felhasználók merevlemez-tartalmához.</p>
+
+<h4>3. Mire használhatók a „sütik”?</h4>
+
+<p>A „sütik” által küldött információk segítségével az internetböngészők könnyebben felismerhetők, így a felhasználók releváns és „személyre szabott” tartalmat kapnak. A cookie-k kényelmesebbé teszik a böngészést, értve ez alatt az online adatbiztonsággal kapcsolatos igényeket és a releváns reklámokat. A „sütik” segítségével a weboldalak üzemeltetői névtelen (anonim) statisztikákat is készíthetnek az oldallátogatók szokásairól. Ezek felhasználásával az oldal szerkesztői még jobban személyre tudják szabni az oldal kinézetét és tartalmát.</p>
+
+<h4>4. Milyen „sütikkel” találkozhat?</h4>
+
+<p>A weboldalak kétféle sütit használhatnak:</p>
+
+<ul>
+	<li>- Ideiglenes „sütik”, melyek addig maradnak eszközén, amíg el nem hagyja weboldalt.</li>
+	<li>- Állandó „sütik”, melyek webes keresőjének beállításától függően hosszabb ideig, vagy egészen addig az eszközén maradnak, amíg azokat Ön nem törli.</li>
+	<li>- Harmadik féltől származó „sütik”, melyeket harmadik fél helyez el az Ön böngészőjében (pl. Google Analitika). Ezek abban az esetben kerülnek a böngészőjében elhelyezésre, ha a meglátogatott weboldal használja a harmadik fél által nyújtott szolgáltatásokat.</li>
+</ul>
+
+<h4>Elengedhetetlen munkamenet (session-id) „sütik”:</h4>
+
+<p>Ezek használata elengedhetetlen a weboldalon történő navigáláshoz, a weboldal funkcióinak működéséhez. Ezek elfogadása nélkül a honlap, illetve annak egyes részei nem, vagy hibásan jelenhetnek meg.</p>
+
+<h4>Analitikai vagy teljesítményfigyelő „sütik”:</h4>
+
+<p>Ezek segítenek abban, hogy megkülönböztessük a weboldal látogatóit, és adatokat gyűjtsünk arról, hogy a látogatók hogyan viselkednek a weboldalon. Ezekkel a „sütikkel” biztosítjuk például, hogy a weboldal az Ön által kért esetekben megjegyezze a bejelentkezést. Ezek nem gyűjtenek Önt azonosítani képes információkat, az adatokat összesítve és névtelenül tárolják. ( pl: Google Analitika)</p>
+
+<h4>Funkcionális „sütik”:</h4>
+
+<p>E sütik feladata a felhasználói élmény javítása. Észlelik, és tárolják például, hogy milyen eszközzel nyitotta meg a honlapot, vagy az Ön által korábban megadott, és tárolni kért adatait: például automatikus bejelentkezés, a választott nyelv, a szövegméretben, betűtípusban vagy a honlap egyéb testre szabható elemében Ön által végrehajtott felhasználói változtatások. Ezek a „sütik” nem követik nyomon az Ön más weboldalakon folytatott tevékenységét. Az általuk gyűjtött információkban lehetnek azonban személyes azonosító adatok, amelyeket Ön megosztott.</p>
+
+<h4>Célzott vagy reklám „sütik”:</h4>
+
+<p>Ezek segítségével a weboldalak az Ön érdeklődési körének leginkább megfelelő információt (marketing) tudnak nyújtani. Ehhez az Ön kifejezett belegyezése szükséges. Ezek a sütik részletes információkat gyűjtenek böngészési szokásairól.</p>
+
+<h4>5. Tartalmaznak a „sütik” személyes adatokat?</h4>
+
+<p>A legtöbb „süti” nem tartalmaz személyes információkat, segítségével nem azonosíthatók a felhasználók. A tárolt adatok a kényelmesebb böngészésért szükségesek, tárolásuk olyan módon történik, hogy jogosulatlan személy nem férhet hozzájuk.</p>
+
+<h4>6. Miért fontosak a „sütik” az interneten?</h4>
+
+<p>A „sütik” szerepe, hogy kényelmesebbé tegyék a felhasználók számára a böngészést, hiszen a böngészési előzmények révén állítja be a felhasználóknak a reklámokat, tartalmakat. A „sütik” letiltása vagy korlátozása néhány weboldalt használhatatlanná tesz. A letiltott vagy korlátozott „sütik” azonban nem jelentik azt, hogy a felhasználóknak nem jelennek meg hirdetések, csupán a megjelenő hirdetések és tartalmak nem „személyre szabottak”, azaz nem igazodnak a felhasználó igényeihez és érdeklődési köréhez. Néhány minta a „sütik” felhasználására:</p>
+
+<ul>
+	<li>- A felhasználó igényeihez igazított tartalmak, szolgáltatások, termékek megjelenítése.</li>
+	<li>- A felhasználó érdeklődési köre szerint kialakított ajánlatok.</li>
+	<li>- Az ön által kért esetben a bejelentkezés megjegyzése (maradjon bejelentkezve).</li>
+	<li>- Internetes tartalmakra vonatkozó gyermekvédelmi szűrők megjegyzése (family mode opciók, safe search funkciók).</li>
+	<li>- Reklámok gyakoriságának korlátozása; azaz, egy reklám megjelenítésének számszerű korlátozása a felhasználó részére adott weboldalon.</li>
+	<li>- A felhasználó számára releváns reklámok megjelenítése.</li>
+	<li>- Geotargeting</li>
+</ul>
+
+<h4>7. Biztonsággal és adatbiztonsággal kapcsolatos tényezők.</h4>
+
+<p>A „sütik” nem vírusok és kémprogramok. Mivel egyszerű szöveg típusú fájlok, ezért nem futtathatók, tehát nem tekinthetők programoknak. Előfordulhat azonban, hogy más szándékkal (rosszindulattal) rejtenek el információkat a „sütiben”, így azok spyware-ként működhetnek. Emiatt a víruskereső és –irtó programok a „sütiket” folyamatosan törlésre ítélhetik.</p>
+
+<p>Mivel az internet böngészésre használt eszköz és a webszerverek folyamatosan kommunikálnak, tehát oda-vissza küldik az adatokat, ezért ha egy támadó (hekker) beavatkozik a folyamatba, kinyerheti a „sütik” által tárolt információkat. Ennek egyik oka lehet például a nem megfelelő módon titkosított internet (WiFi) beállítás. Ezt a rést kihasználva adatokat nyerhetnek ki a „sütikből”.</p>
+
+<h4>8. A „sütik” kezelése, törlése</h4>
+
+<p>A „sütiket” a használt böngészőprogramokban lehet törölni vagy letiltani. A böngészők alapértelmezett módon engedélyezik a „sütik” elhelyezését. Ezt a böngésző beállításainál lehet letiltani, valamint a meglévőket törölni. Mindemellett beállítható az is, hogy a böngésző értesítést küldjön a felhasználónak, amikor „sütit” küld az eszközre. Fontos hangsúlyozni azonban, hogy ezen fájlok letiltása vagy korlátozása rontja a böngészési élményt, valamint hiba jelentkezhet a weboldal funkciójában is.</p>
+
+<ul>
+	<li>- A beállítási lehetőségek általában a böngésző „Opciók” vagy „Beállítások” menüpontjában találhatók. Mindegyik webes kereső különböző, így a megfelelő beállításokhoz kérjük. használja keresője “Segítség” menüjét, illetve az alábbi linkeket a sütik beállításainak módosításához:</li>
+</ul>
+<a href="https://support.microsoft.com/hu-hu/help/17442/windows-internet-explorer-delete-manage-cookies" target="_blank">Cookie settings in Internet Explorer</a><br>
+<a href="https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer?redirectlocale=en-US&amp;redirectslug=Cookies" target="_blank">Cookie settings in Firefox</a><br>
+<a href="https://support.google.com/chrome/answer/95647?hl=en" target="_blank">Cookie settings in Chrome</a><br>
+<a href="https://support.apple.com/kb/PH5042?locale=en_US" target="_blank">Cookie settings in Safari</a>
+
+<ul>
+	<li>- Az anonim Google Analitika „sütik” kikapcsolásához egy úgynevezett „Google Analytics plug-in”-t (kiegészítőt) telepíthet a böngészőjébe, mely megakadályozza, hogy a honlap az Önre vonatkozó információkat küldjön a Google Analitikának. Ezzel kapcsolatban további információkat az alábbi linkeken talál:</li>
+</ul>
+<a href="https://support.google.com/analytics/answer/6004245">Google Analytics &amp; Privacy</a> vagy <a href="http://www.google.hu/intl/hu/policies/technologies/"> Google Elvek és Irányelvek</a>
+
+<h4>9. További hasznos linkek</h4>
+
+<p>Ha szeretne többet megtudni a „sütik”-ről, azok felhasználásáról:</p>
+<a href="https://support.microsoft.com/en-us/help/260971/description-of-cookies" target="_blank">Microsoft Description of Cookies</a><br>
+<a href="http://www.allaboutcookies.org/">All About Cookies</a><br>
+<a href="https://www.facebook.com/help/cookies/" style="padding-bottom: 20px;">Facebook cookies</a></div>
+
+                </div>
+            </article>					 
+
+<h4>Alap cikk:<h4>
+         <h4><a href="https://gdprmost.hu/cookie-tajekoztato" >GDPRMOST</a> alapján<h4>
+  
+
+      
+    
+  
+
+
+
+<footer class="container-fluid text-center">
+  <a href="#" title="Föl">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+</footer>
+  <p>Foxy bot 2020-<script>document.write(new Date().getFullYear())</script> (By: TutiCraft)</p>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+
+
+</h6>
+      
+</strong></strong></h6></body></html>
