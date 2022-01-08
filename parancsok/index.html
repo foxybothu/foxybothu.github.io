@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+<div class="foxy bot head and meta and scripts">
     <head>
-        <meta charset="utf-8">
+     <meta charset="utf-8">
         <title>Parancsok - Foxy bot</title>
 <html lang="hu"><head>
 	<meta data-n-head="1" data-hid="og:type" name="og:type" content="website">
@@ -26,23 +27,60 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </div>
+  
+  <div class="styles and scripts">
+  
   <style>
   body {
     font: 400 15px Lato, sans-serif;
     line-height: 1.8;
     color: #fff;
-  }
-  
-	  .scrollbar {
+  overflow: hidden; /* Hide scrollbars */    
+}
+	  .scroller {
+
+  height: 500px;
+  overflow-y: scroll;
 	  scrollbar-color: dodgerblue #dedede;
+      scrollbar-width: thin;
 	  }
 	  
 	.card-title	{
 color: #e68517;
-    font-size: 24px;
+    font-size: 40px;
     font-weight: 700;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
+
+	.card-mire	{
+color: #e68517;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+	.card-more	{
+color: #00aeff;
+    font-size: 25px;
+    font-weight: 700;
+    margin-up: 10px;
+}
+
+
+	.card-use {
+color: #e68517;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 0px;
+    under-line: 10px;
+}
+.card-subtitle {
+color: #26949e;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    }
 
 										   
   h1 {
@@ -127,6 +165,8 @@ color: #e68517;
     background-color: #fff !important;
     color: #fff;
   }
+  
+
   .panel-heading {
     color: #fff !important;
     background-color: #fff !important;
@@ -139,6 +179,7 @@ color: #e68517;
   }
   .panel-footer {
     background-color: white !important;
+    height: 20px;
   }
   .panel-footer h3 {
     font-size: 32px;
@@ -227,6 +268,7 @@ color: #e68517;
   }
   </style>
 </head>
+
 <body id="foxy" data-spy="scroll" data-target=".navbar" data-offset="60">
 <style>
 * {box-sizing: border-box;}
@@ -294,74 +336,7 @@ body {
 }
 </style>
 
-
-
-        
-<div id="navbar" style="padding: 30px 10px;">
-  <a href="/" id="logo" style="font-size: 25px;">Foxy Bot</a>
-  <div id="navbar-right">
-    <a class="active" href="/">Kezdőlap</a>
-    <a href="/invite/">Invite</a>
-      </div>
-</div>
-<h1>.<h1><h1>.<h1>
-<!-- <div style="margin-top:210px;padding:15px 15px 2500px;font-size:30px">
- <div>-->
-
-<script>
-// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElementById("navbar").style.padding = "30px 10px";
-    document.getElementById("logo").style.fontSize = "25px";
-  } else {
-    document.getElementById("navbar").style.padding = "35px 10px";
-    document.getElementById("logo").style.fontSize = "35px";
-  }
-}
-</script>
-     
-
-
-      
-    
-  
-
-
-<div class="jumbotron text-center">
-  <h1>Foxy bot</h1> 
-  <p>Egy jó bot :D</p> 
-		<a type="button" class="btn btn-info" href="/dc/"><span>Discord szerver</span></a>
-</div>
 <style>
-.alert-link {
-cursor: alias;}
-
-</style>
-
-<div class="container">
-
-  
-  <div class="alert alert-warning alert-dismissible">
-    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-    <p><strong>Cookie-k!</strong> Az oldal annak érdekében, hogy jobb 
-    <p>legyen meg, hogy jobban működjön.<p>
-    <p> Megértését köszönjük!</p>
-    Többet <a href="/cookie/" class="alert-link">ide kattolva olvasshat.</a>
-  </div>
-								 
-								 
-  <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-<style>
-
 
 * {
   box-sizing: border-box;
@@ -399,7 +374,51 @@ cursor: alias;}
 #myUL li a:hover:not(.header) {
   background-color: #eee;
 }
+
 </style>
+
+<script>
+// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("navbar").style.padding = "30px 10px";
+    document.getElementById("logo").style.fontSize = "25px";
+  } else {
+    document.getElementById("navbar").style.padding = "35px 10px";
+    document.getElementById("logo").style.fontSize = "35px";
+  }
+}
+</script>
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        
+<div id="navbar" style="padding: 30px 10px;">
+  <a href="/" id="logo" style="font-size: 25px;">Foxy Bot</a>
+  <div id="navbar-right">
+    <a class="active" href="/">Kezdőlap</a>
+    <a href="/invite/">Invite</a>
+      </div>
+</div>
+<h1>.<h1><h1>.<h1>
+</div>
+  <div class="scroller">
+<!-- <div style="margin-top:210px;padding:15px 15px 2500px;font-size:30px">
+ <div>-->
+
+  
+<div class="jumbotron text-center">
+  <h1>Foxy bot</h1> 
+  <p>Egy jó bot :D</p> 
+	<a type="button" class="btn btn-info" href="/#mégnincsdc"><span>Discord szerver</span></a>
+</div>						 
+
 </head>
 <body>
 
@@ -411,14 +430,22 @@ cursor: alias;}
 
 
 <ul id="myUL">
+
+
+
 <li>
-<a>
+<!-- Ban -->
+<a href="/parancsok/ban/">
 <div class="card" style="width:50rem;" >
  <!-- <img class="card-img-top" src=""  alt="Card image top">-->
-  <div class="card-body">
-    <h3 class="card-title">-ban</h3>
-    <h4 class="card-subtitle">Banolhatsz vele embereket.</h4>
-    <p class="card-text">-ban {ember/id} [indok/üresen hagyod]</p>
+
+<div class="card-body">
+ <h3 class="card-title"  >-kick</h3>
+        <p class="card-mire">Mire jó?</p>
+      <h4 class="card-subtitle">-Bannolni embereket a szerveredről</h4>
+          <p class="card-use">Használat</p>
+    <p class="card-text">-ban {ember/id} [indok]</p>
+    <u class="card-more">Többet ide kattintva láthatsz</u>
   </div>
 </div>   
 </a>
@@ -426,9 +453,24 @@ cursor: alias;}
 
 
 
-
+<li>
+<!-- Kick -->
+<a href="/parancsok/kick/">
+<div class="card" style="width:50rem;" >
+<div class="card-body">
+     <h3 class="card-title"  >-kick</h3>
+        <p class="card-mire">Mire jó?</p>
+      <h4 class="card-subtitle">-Kickelni embereket a szerveredről</h4>
+          <p class="card-use">Használat</p>
+    <p class="card-text">-kick {ember/id} [indok]</p>
+    <u class="card-more">Többet ide kattintva láthatsz</u>
+  </div>
+</div>   
+</a>
+</li>
 
 </ul>
+  <div class="styles and scripts 2">
 
 <script>
 function myFunction() {
@@ -448,20 +490,8 @@ function myFunction() {
     }
 }
 </script>
-								 
-								 
-								 
-								 
 
-  
-  
-  
-
-      </div>
-    </div>
-  </div>
 </div>
-
 
 <footer class="container-fluid text-center">
   <a href="#" title="Föl">
@@ -469,6 +499,8 @@ function myFunction() {
   </a>
  </footer>
   <p>Foxy bot 2020-<script>document.write(new Date().getFullYear())</script> (By: TutiCraft)</p>
+</div></div></div>
+  <div class="styles and scripts 3">
 
 <script>
 $(document).ready(function(){
@@ -506,8 +538,7 @@ $(document).ready(function(){
   });
 })
 </script>
-
-
-
+</div>
+</div>
 </h1></body></html>
       
