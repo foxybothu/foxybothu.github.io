@@ -254,7 +254,7 @@ body {
   padding: 12px;
   text-decoration: none;
   font-size: 18px; 
-  line-height: 25px;
+  line-height: 18px;
   border-radius: 4px;
 }
 
@@ -280,8 +280,9 @@ body {
 
 @media screen and (max-width: 580px) {
   #navbar {
-    padding: 20px 10px !important;
+    padding: 10px 10px !important;
   }
+
   #navbar a {
     float: none;
     display: block;
@@ -303,11 +304,7 @@ body {
     <a href="/invite/">Invite</a>
       </div>
 </div>
-<h1>.</h1><h1>
-</h1><h1>.</h1><h1>
-</h1><h1>.</h1><h1>
-</h1>.<h1></h1>.<h1>
-<h1></h1>
+<h1>.<h1><h1>.<h1>
 <!-- <div style="margin-top:210px;padding:15px 15px 2500px;font-size:30px">
  <div>-->
 
@@ -316,11 +313,11 @@ body {
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     document.getElementById("navbar").style.padding = "30px 10px";
     document.getElementById("logo").style.fontSize = "25px";
   } else {
-    document.getElementById("navbar").style.padding = "80px 10px";
+    document.getElementById("navbar").style.padding = "35px 10px";
     document.getElementById("logo").style.fontSize = "35px";
   }
 }
@@ -357,7 +354,7 @@ function scrollFunction() {
 }
 
 #myInput {
-  background-image: url('/css/searchicon.png');
+  background-image: url('https://w3schools.com/css/searchicon.png');
   background-position: 10px 12px;
   background-repeat: no-repeat;
   width: 100%;
@@ -395,7 +392,7 @@ function scrollFunction() {
 <h6><strong>Paraméterek:<strong><h6>
 <p>{}=kötelező
 []=nem kötelező<p>
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Keress parancsra névből/benne lévő adatból" title="Írj be parancsot!">
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Keress parancsra névből/benne lévő adatból" title="Írj be parancsot!" >
 
 
 <ul id="myUL">
@@ -455,8 +452,7 @@ function myFunction() {
   <a href="#" title="Föl">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
-  <p>Discord szerver: 
-</p></footer>
+ </footer>
   <p>Foxy bot 2020-<script>document.write(new Date().getFullYear())</script> (By: TutiCraft)</p>
 
 <script>
